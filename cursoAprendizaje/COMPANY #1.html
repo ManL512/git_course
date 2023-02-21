@@ -1,0 +1,586 @@
+<html style="--app-height: 680px;" lang="en"><head><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=dzone.com&amp;callback=_gfp_s_&amp;client=ca-pub-3945085396033279"></script><script async="" src="https://www.clarity.ms/eus/s/0.7.2/clarity.js"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202302130101/show_ads_impl_fy2021.js" id="google_shimpl"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-TSD9TZP&amp;cid=574574851.1676920838"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Now that you know more about what Git is, take a look at the 20 most common Git commands you'll need to know to use Git, plus examples of using each one.">
+  <meta name="keywords" content="Git, command">
+
+  <meta property="og:description" content="Now that you know more about what Git is, take a look at the 20 most common Git commands you'll need to know to use Git, plus examples of using each one.">
+  <meta property="og:site_name" content="dzone.com">
+  <meta property="og:title" content="Top 20 Git Commands With Examples - DZone">
+  <meta property="og:url" content="https://dzone.com/articles/top-20-git-commands-with-examples">
+  <meta property="og:image" content="https://dz2cdn4.dzone.com/storage/article-thumb/9818495-thumb.jpg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:site" content="@DZoneInc">
+  <meta name="twitter:image" content="https://dz2cdn4.dzone.com/storage/article-thumb/9818495-thumb.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Now that you know more about what Git is, take a look at the 20 most common Git commands you'll need to know to use Git, plus examples of using each one.">
+  <meta name="twitter:title" content="Top 20 Git Commands With Examples - DZone">
+
+  <meta name="referrer" content="origin-when-cross-origin">
+  <meta name="google-site-verification" content="kndbhxcupfEqWmZclhCpB6vlgOs7QSmx2UHAGGnP2mA">
+  <meta name="df-verify" content="df0d76632b4543">
+
+  <link rel="icon" type="image/x-icon" href="https://dz2cdn4.dzone.com/themes/dz20/images/favicon.png">
+  <link rel="image_src" href="https://dz2cdn4.dzone.com/storage/article-thumb/9818495-thumb.jpg">
+  <link rel="canonical" href="https://dzone.com/articles/top-20-git-commands-with-examples">
+
+  <title>Top 20 Git Commands With Examples - DZone</title>
+
+  <link rel="preload" href="https://fonts.dzone.com/themes/dz20/font/fontello.woff?11773374" as="font" type="font/woff" crossorigin="anonymous">
+
+  <link rel="stylesheet" media="all" href="https://dz2cdn4.dzone.com/themes/dz20/ftl/icons.css">
+  <link rel="stylesheet" media="all" href="https://dz2cdn4.dzone.com/themes/dz20/lib/static/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" media="all" href="https://dz2cdn4.dzone.com/themes/dz20/ftl/article/global.css">
+  <link rel="stylesheet" media="all" href="https://dz2cdn4.dzone.com/themes/dz20/ftl/header-updated/styles.css">
+
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script type="text/javascript" async="" src="https://ml314.com/tag.aspx?2012023"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-7ZXEBRP6FQ&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://ml314.com/tag.aspx?2012023"></script><script async="" src="https://www.clarity.ms/tag/dyr9vdlv8t"></script><script async="" src="https://vi.ml314.com/get?eid=65559&amp;tk=v56Edzruvd7dE2f68VuNhft2O2fbnq2blg8566IFCW1MX43d&amp;fp="></script><script async="" src="https://ml314.com/tag.aspx?201"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K25QL22"></script><script>
+      !function (e, o, n, i) {
+          if (!e) {
+              e = e || {}, window.permutive = e, e.q = [];
+              var t = function () {
+                  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, function (e) {
+                      return (e ^ (window.crypto || window.msCrypto).getRandomValues(new Uint8Array(1))[0] & 15 >> e / 4).toString(16)
+                  })
+              };
+              e.config = i || {}, e.config.apiKey = o, e.config.workspaceId = n, e.config.environment = e.config.environment || "production", (window.crypto || window.msCrypto) && (e.config.viewId = t());
+              for (var g = ["addon", "identify", "track", "trigger", "query", "segment", "segments", "ready", "on", "once", "user", "consent"], r = 0; r < g.length; r++) {
+                  var w = g[r];
+                  e[w] = function (o) {
+                      return function () {
+                          var n = Array.prototype.slice.call(arguments, 0);
+                          e.q.push({
+                              functionName: o,
+                              arguments: n
+                          })
+                      }
+                  }(w)
+              }
+          }
+      }(window.permutive, "bca90777-e088-4f2a-96c2-13ad18deeccc", "18ad0c5b-460c-4d19-a729-dc537805538f", {});
+      window.googletag = window.googletag || {}, window.googletag.cmd = window.googletag.cmd || [], window.googletag.cmd.push(function () {
+          if (0 === window.googletag.pubads().getTargeting("permutive").length) {
+              var e = window.localStorage.getItem("_pdfps");
+              window.googletag.pubads().setTargeting("permutive", e ? JSON.parse(e) : []);
+              var o = window.localStorage.getItem("permutive-id");
+              o && (window.googletag.pubads().setTargeting("puid", o), window.googletag.pubads().setTargeting("ptime", Date.now().toString())), window.permutive.config.viewId && window.googletag.pubads().setTargeting("prmtvvid", window.permutive.config.viewId), window.permutive.config.workspaceId && window.googletag.pubads().setTargeting("prmtvwid", window.permutive.config.workspaceId)
+          }
+      });
+
+
+      permutive.addon('web', {
+          'page': {
+              'category': 'Deployment',
+              'node': {
+                  'authorCompany': 'Oorwin',
+                  'authors': [3288749, ],
+                  'publishDate': new Date(1655769600000),
+                  'sponsorAuthor': false,
+                  'tags': ['Git', 'command', ],
+                  'title': 'Top 20 Git Commands With Examples',
+                  'type': 'article',
+              },
+              'section': 'article',
+          }
+      });
+  </script>
+  <script async="" src="https://18ad0c5b-460c-4d19-a729-dc537805538f.edge.permutive.app/18ad0c5b-460c-4d19-a729-dc537805538f-web.js"></script>
+
+  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3945085396033279" crossorigin="anonymous" data-checked-head="true"></script>
+<meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2023021401.js" async=""></script><link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=dzone.com"></script><link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=dzone.com"></script><link rel="stylesheet" href="https://dz2cdn4.dzone.com/themes/dz20/lib/codemirror/lib/codemirror.css"><link rel="stylesheet" href="https://dz2cdn4.dzone.com/themes/dz20/ftl/comments/styles.css"><link rel="stylesheet" href="https://dz2cdn4.dzone.com/themes/dz20/lib/froala3/css/froala_editor.pkgd.min.css"><link rel="stylesheet" href="https://dz2cdn4.dzone.com/themes/dz20/lib/froala3/css/themes/gray.min.css"><link rel="stylesheet" href="https://dz2cdn4.dzone.com/themes/dz20/ftl/article/mini-profile.css"><script src="https://dz2cdn4.dzone.com/themes/dz20/lib/lazysizes.min.js"></script><script id="omapi-script" src="//a.optnmstr.com/app/js/api.min.js" async=""></script><script src="https://dz2cdn4.dzone.com/themes/dz20/ftl/article/codeblocks.js"></script><script src="https://dz2cdn4.dzone.com/themes/dz20/ftl/article/activity-bar.js"></script><script src="https://dz2cdn4.dzone.com/themes/dz20/lib/froala3/js/froala_editor.pkgd.min.js"></script><script src="https://dz2cdn4.dzone.com/themes/dz20/ftl/froala/content.js"></script><script src="https://dz2cdn4.dzone.com/themes/dz20/ftl/comments/content.js"></script><script src="https://dz2cdn4.dzone.com/themes/dz20/ftl/article/content.js"></script><link rel="stylesheet" href="https://a.omappapi.com/app/js/api.min.css" id="omapi-css" media="all"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400%7C'Source+Sans+Pro':700,400%7CNoto+Sans:400,900,500,600" media="all"><link rel="stylesheet" href="https://a.omappapi.com/app/js/font-awesome/4.7.0/css/font-awesome.css" media="all"><script src="https://a.omappapi.com/app/js/webfont/1.5.18/webfont.js" async=""></script><link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=dzone.com"></script><link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=dzone.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=dzone.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=dzone.com"></script></head>
+<body style="overflow-y: auto;">
+<header id="ftl-header">
+    <div class="header-top"> 
+
+<div class="header-container">
+    <div class="pull-left logo-container">
+        <div class="logo">
+            <a class="inner" href="/">
+                <picture>
+                    <source srcset="https://dz2cdn4.dzone.com/themes/dz20/images/dz_logo_2021_cropped.webp" type="image/webp">
+                    <source srcset="https://dz2cdn4.dzone.com/themes/dz20/images/dz_logo_2021_cropped.png" type="image/png">
+                    <img src="https://dz2cdn4.dzone.com/themes/dz20/images/dz_logo_2021_cropped.png" alt="DZone" width="181" height="56">
+                </picture>
+            </a>
+        </div>
+    </div>
+
+    <div class="pull-right login-and-search">
+        <div id="authenticated-block" class="logged-in">
+            <div class="welcome-back">Thanks for visiting DZone today,</div>
+            <div id="user-header" class="user-info">
+                <button class="user-avatar">
+                    <span id="header-username" class="username"></span>
+                    <img id="header-avatar" src="" alt="user avatar">
+                </button>
+                <div id="user-dropdown" class="browse-user-menu">
+                    <div class="user-content">
+                        <a id="header-user-plug" href="#" class="user-description"></a>
+                        <a id="header-user-edit" href="#" class="edit-profile">Edit Profile</a>
+                    </div>
+                    <ul class="user-actions">
+                        <li id="first-user-action"><a id="header-dropdown-manage-email" href="#">Manage Email Subscriptions</a></li>
+                        <li>
+                            <a href="/articles/how-to-submit-a-post-to-dzone?utm_source=DZone&amp;utm_medium=user_dropdown&amp;utm_campaign=how_to_post">
+                                How to Post to DZone
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/articles/dzones-article-submission-guidelines">
+                                Article Submission Guidelines
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="bottom">
+                        <a href="/users/logout.html" class="sign-out">Sign Out</a>
+                        <a id="dropdown-view-profile" href="#" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <button id="post-button" class="post-content--button">
+                    <span class="post-class">Post</span>
+                    <i class="icon-plus"></i>
+                </button>
+
+                <div id="post-menu" class="posting-links">
+                    <div class="posting-links-menu">
+                        <ul>
+                            <li>
+                                <img src="/themes/dz20/images/dz-postarticle.svg" style="width: 15px; height: 18px;" width="15" height="18">
+                                <a href="/content/article/post.html">Post an Article</a>
+                            </li>
+                            <li>
+                                <a id="drafts-link" href="#">Manage My Drafts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="unauthenticated-block" class="shown">
+            <div class="dz-intro">Over 2 million developers have joined DZone.</div>
+            <div class="mobile-invisible sign-in-join">
+                <a href="/users/login.html">Log In</a>
+                <span class="dz-intro-span">/</span>
+                <a href="/static/registration.html">Join</a>
+            </div>
+            <a class="join-icon" href="/users/login.html"><i class="icon-user"></i></a>
+        </div>
+        <div class="headerSearch">
+            <a class="icon-search dropdown-toggle" href="/search"></a>
+        </div>
+    </div>
+</div>    </div>
+    <div class="header-bottom">
+        <div class="header-bottom-container">
+            <a class="resource-link" href="/refcardz">Refcards</a>
+            <a class="resource-link" href="/trendreports">Trend Reports</a>
+            <a class="resource-link" href="/webinars">Events</a>
+            <span class="right-label unauthenticated">
+                Over 2 million developers have joined DZone. <a class="label-emphasis" href="/static/registration.html">Join Today!</a>
+            </span>
+            <span class="right-label authenticated user-menu-parent">
+                <span class="welcome-slogan">Thanks for visiting DZone today, </span>
+                <div class="header-menu user-menu" data-click-activation="">
+                    <a class="label-emphasis" href="javascript:void(0)">
+                        <span id="header-user-name"></span>
+                        <div class="header-user-dot-menu"><i class="icon-dot-3"></i></div>
+                    </a>
+                    <div class="header-menu-items" style="display: none;">
+                        <a id="header-user-edit-profile" class="header-menu-item" href="javascript:void(0)">Edit Profile</a>
+                        <a id="header-user-email-preferences" class="header-menu-item" href="javascript:void(0)">Manage Email Subscriptions</a>
+                        <a class="header-menu-item" href="/moderation/list.html">Moderation</a>
+                        <a class="header-menu-item" href="/dzone/staff/index.html">Admin Console</a>
+                        <a class="header-menu-item" href="/articles/how-to-submit-a-post-to-dzone?utm_source=DZone&amp;utm_medium=user_dropdown&amp;utm_campaign=how_to_post">How to Post to DZone</a>
+                        <a class="header-menu-item" href="/articles/dzones-article-submission-guidelines">Article Submission Guidelines</a>
+                        <a id="header-user-profile" class="header-menu-item menu-item-btn-container" href="javascript:void(0)"><div class="menu-item-btn">View Profile</div></a>
+                        <a class="header-menu-item menu-item-btn-container" href="/users/logout.html"><div class="menu-item-btn danger">Sign Out</div></a>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+    <nav class="header-menu-bar">
+        <div class="header-menu resource-category">
+            <a href="/refcardz">Refcards</a>
+        </div>
+        <div class="header-menu-separator resource-category-separator"></div>
+        <div class="header-menu resource-category">
+            <a href="/trendreports">Trend Reports</a>
+        </div>
+        <div class="header-menu-separator resource-category-separator"></div>
+        <div class="header-menu resource-category">
+            <a href="/webinars">Events</a>
+        </div>
+        <div class="header-menu zone-menu" tabindex="1" data-click-activation="">
+            <a href="javascript:void(0)">Zones <i class="icon-down-dir icon-closed"></i><i class="icon-right-dir icon-open"></i></a>
+            <div class="header-menu-items" style="display: none;">
+                <div class="header-menu-columns">
+                        <div class="header-menu-column-item">
+                            <a class="header-menu-item" href="javascript:void(0)" data-goto="/culture-and-methodologies">Culture and Methodologies</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/agile">Agile</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/career-development">Career Development</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/methodologies">Methodologies</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/team-management">Team Management</a>
+                        </div>
+                        <div class="header-menu-column-item">
+                            <a class="header-menu-item" href="javascript:void(0)" data-goto="/data-engineering">Data Engineering</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/ai-ml">AI/ML</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/big-data">Big Data</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/data">Data</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/databases">Databases</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/iot">IoT</a>
+                        </div>
+                        <div class="header-menu-column-item">
+                            <a class="header-menu-item" href="javascript:void(0)" data-goto="/software-design-and-architecture">Software Design and Architecture</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/cloud-architecture">Cloud Architecture</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/containers">Containers</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/integration">Integration</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/microservices">Microservices</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/performance">Performance</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/security">Security</a>
+                        </div>
+                        <div class="header-menu-column-item">
+                            <a class="header-menu-item" href="javascript:void(0)" data-goto="/coding">Coding</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/frameworks">Frameworks</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/java">Java</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/javascript">JavaScript</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/languages">Languages</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/tools">Tools</a>
+                        </div>
+                        <div class="header-menu-column-item">
+                            <a class="header-menu-item" href="javascript:void(0)" data-goto="/testing-deployment-and-maintenance">Testing, Deployment, and Maintenance</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/deployment">Deployment</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/devops-and-cicd">DevOps and CI/CD</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/maintenance">Maintenance</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/monitoring-and-observability">Monitoring and Observability</a>
+                                    <a class="header-menu-item" href="javascript:void(0)" data-goto="/testing-tools-and-frameworks">Testing, Tools, and Frameworks</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+            <div class="header-menu parent-category" tabindex="1">
+                <a href="/culture-and-methodologies">Culture and Methodologies</a>
+                <div class="header-menu-items" style="display: none;">
+                            <a class="header-menu-item" href="/agile">Agile</a>
+                            <a class="header-menu-item" href="/career-development">Career Development</a>
+                            <a class="header-menu-item" href="/methodologies">Methodologies</a>
+                            <a class="header-menu-item" href="/team-management">Team Management</a>
+                </div>
+            </div>
+            <div class="header-menu-separator parent-category-separator"></div>
+            <div class="header-menu parent-category" tabindex="2">
+                <a href="/data-engineering">Data Engineering</a>
+                <div class="header-menu-items" style="display: none;">
+                            <a class="header-menu-item" href="/ai-ml">AI/ML</a>
+                            <a class="header-menu-item" href="/big-data">Big Data</a>
+                            <a class="header-menu-item" href="/data">Data</a>
+                            <a class="header-menu-item" href="/databases">Databases</a>
+                            <a class="header-menu-item" href="/iot">IoT</a>
+                </div>
+            </div>
+            <div class="header-menu-separator parent-category-separator"></div>
+            <div class="header-menu parent-category" tabindex="3">
+                <a href="/software-design-and-architecture">Software Design and Architecture</a>
+                <div class="header-menu-items" style="display: none;">
+                            <a class="header-menu-item" href="/cloud-architecture">Cloud Architecture</a>
+                            <a class="header-menu-item" href="/containers">Containers</a>
+                            <a class="header-menu-item" href="/integration">Integration</a>
+                            <a class="header-menu-item" href="/microservices">Microservices</a>
+                            <a class="header-menu-item" href="/performance">Performance</a>
+                            <a class="header-menu-item" href="/security">Security</a>
+                </div>
+            </div>
+            <div class="header-menu-separator parent-category-separator"></div>
+            <div class="header-menu parent-category" tabindex="4">
+                <a href="/coding">Coding</a>
+                <div class="header-menu-items" style="display: none;">
+                            <a class="header-menu-item" href="/frameworks">Frameworks</a>
+                            <a class="header-menu-item" href="/java">Java</a>
+                            <a class="header-menu-item" href="/javascript">JavaScript</a>
+                            <a class="header-menu-item" href="/languages">Languages</a>
+                            <a class="header-menu-item" href="/tools">Tools</a>
+                </div>
+            </div>
+            <div class="header-menu-separator parent-category-separator"></div>
+            <div class="header-menu parent-category" tabindex="5">
+                <a href="/testing-deployment-and-maintenance">Testing, Deployment, and Maintenance</a>
+                <div class="header-menu-items" style="display: none;">
+                            <a class="header-menu-item" href="/deployment">Deployment</a>
+                            <a class="header-menu-item" href="/devops-and-cicd">DevOps and CI/CD</a>
+                            <a class="header-menu-item" href="/maintenance">Maintenance</a>
+                            <a class="header-menu-item" href="/monitoring-and-observability">Monitoring and Observability</a>
+                            <a class="header-menu-item" href="/testing-tools-and-frameworks">Testing, Tools, and Frameworks</a>
+                </div>
+            </div>
+            <div class="header-menu-separator parent-category-separator"></div>
+    </nav>
+</header>
+
+<script>
+    const csrf = {
+        parameter: 'TH_CSRF',
+        header: 'X-TH-CSRF',
+        token: '7610327176731886980'
+    }; // set csrf for auth-status script
+</script>
+<script>
+addEventListener('DOMContentLoaded', function() {
+    handleRedirects();
+    handleMenus();
+    // handleSearch(); // re-enable when we move to new top header
+    handleMobileMenuHeights();
+    handleGotoLinks();
+});
+
+function isHidden(element) {
+    try {
+        return window.getComputedStyle(element).display === 'none';
+    } catch (_) {
+        return false;
+    }
+}
+
+function getLink(element) {
+    if (element.hasAttribute('data-goto')) {
+        return element.getAttribute('data-goto');
+    }
+    return element.href;
+}
+
+function isLeftClick(event) {
+    if (event.altKey || event.shiftKey) {
+        return false;
+    } else if ('buttons' in event || 'which' in event) {
+        return event.buttons === 1 || event.which === 1;
+    } else {
+        return (event.button === 1 || (event.type === 'click'));
+    }
+}
+
+function handleRedirects() {
+    const redirections = [...document.querySelectorAll('[data-activate-menu]'), ...document.querySelectorAll('[data-click-target]')];
+
+    redirections.forEach(function(element) {
+        const menuSelector = element.getAttribute('data-activate-menu') || element.getAttribute('data-click-target');
+        const redirectingElement = document.querySelector(menuSelector);
+        if (redirectingElement) {
+            element.style.cursor = 'pointer';
+            const redirect = function(e) {
+                if (redirectingElement.hasAttribute('href') || redirectingElement.hasAttribute('data-goto')) {
+                    if (redirectingElement.hasAttribute('data-new-window') || e.ctrlKey || e.metaKey) {
+                        window.open(getLink(redirectingElement), '_blank');
+                    } else {
+                        window.open(getLink(redirectingElement), '_self');
+                    }
+                } else {
+                    const evt = new e.constructor(e.type, e);
+                    redirectingElement.dispatchEvent(evt);
+                }
+            };
+            element.addEventListener('mouseup', redirect);
+            element.addEventListener('mousedown', (e) => e.preventDefault());
+            element.addEventListener('click', (e) => e.preventDefault());
+        }
+    });
+}
+
+function handleMenus() {
+    const menuElements = document.querySelectorAll('.header-menu > a');
+
+    let scrollYMemory = -1;
+
+    function scrollToMemory() {
+        if (scrollYMemory !== -1) {
+            setTimeout(function() {
+                window.scrollTo(0, scrollYMemory);
+                scrollYMemory = -1;
+            }, 10);
+        }
+    }
+
+    function hideMenus() {
+        // unfocus menus & items, and set the menus to non-visible.
+        menuElements.forEach(function (element) {
+            element.blur();
+            element.parentElement.blur();
+            element.parentElement.classList.remove('menu-opened');
+            const menuItems = element.parentElement.querySelector('.header-menu-items');
+            if (menuItems) {
+                menuItems.style.display = 'none';
+            }
+        });
+        const wasHidden = document.body.style.overflowY === 'hidden';
+        document.body.style.overflowY = 'auto';
+        if (wasHidden) {
+            scrollToMemory();
+        }
+    }
+
+    function isEventOutsideMenu(e) {
+        return e.target.closest && !e.target.closest('.header-menu') && !e.target.closest('[data-activate-menu]');
+    }
+
+    // Handle mobile menu toggling
+    menuElements.forEach(function(element) {
+        const menu = element.parentElement;
+        const headerItems = menu.querySelector('.header-menu-items');
+        const menuEntries = headerItems ? headerItems.querySelectorAll('.header-menu-item') : [];
+
+        const focus = function() {
+            menu.focus();
+            menu.classList.add('menu-opened');
+            if (headerItems) {
+                headerItems.style.display = 'block';
+            }
+            if (menu.classList.contains('zone-menu')) {
+                scrollYMemory = window.scrollY;
+                document.body.style.overflowY = 'hidden';
+            } else {
+                scrollYMemory = -1;
+            }
+        };
+
+        const unfocus = function() {
+            menu.blur();
+            menu.classList.remove('menu-opened');
+            if (headerItems) {
+                headerItems.style.display = 'none';
+            }
+            const wasHidden = document.body.style.overflowY === 'hidden';
+            document.body.style.overflowY = 'auto';
+            if (wasHidden) {
+                scrollToMemory();
+            }
+        };
+
+        const toggleMenuVisibility = function(e) {
+            if ((e.type === 'click' || e.type === 'mouseup') && !isLeftClick(e)) {
+                e.preventDefault();
+                return;
+            }
+            const hidden = isHidden(headerItems);
+            if (menu.hasAttribute('data-click-activation')) { // handle click activated toggling
+                if (hidden) {
+                    hideMenus(); // hide other open menus first
+                    focus();
+                } else {
+                    unfocus();
+                }
+                e.preventDefault();
+            } else if (hidden) {
+                hideMenus(); // hide other open menus first
+                focus();
+                e.preventDefault(); // prevent 'click' event from firing when menu is hidden
+            }
+        };
+
+        element.addEventListener('touchend', toggleMenuVisibility);
+        element.addEventListener('mouseup', toggleMenuVisibility);
+
+        // Add hover events to non-click-activated menus, even though CSS should cover it.
+        if (!menu.hasAttribute('data-click-activation')) {
+            menu.addEventListener('mouseover', function () {
+                hideMenus(); // hide other open menus first
+                focus();
+            });
+
+            menu.addEventListener('mouseout', function (e) {
+                if (isEventOutsideMenu(e)) {
+                    unfocus();
+                }
+            });
+        }
+
+        // Hide menu when child is clicked
+        menuEntries.forEach(function(menuEntry) {
+            const linkToItem = function(e) {
+                if (e.type === 'mousedown' || e.type === 'click') {
+                    e.preventDefault();
+                    return;
+                }
+                if (e.type === 'mouseup' && !isLeftClick(e)) {
+                    e.preventDefault();
+                    return;
+                }
+                window.open(getLink(menuEntry), (e.ctrlKey || e.metaKey) ? '_blank' : (menuEntry.target || '_self'));
+                unfocus();
+                e.preventDefault();
+            };
+
+            const linkToMobileItem = function(e) {
+                if (e.type === 'touchstart') {
+                    menuEntry.setAttribute('data-touchmove', false);
+                } else if (e.type === 'touchmove') {
+                    menuEntry.setAttribute('data-touchmove', true);
+                } else if (e.type === 'touchend' && (!menuEntry.hasAttribute('data-touchmove') || menuEntry.getAttribute('data-touchmove').toLowerCase() === 'false')) {
+                    window.open(getLink(menuEntry), (e.ctrlKey || e.metaKey) ? '_blank' : (menuEntry.target || '_self'));
+                    unfocus();
+                    e.preventDefault();
+                }
+            };
+
+            menuEntry.addEventListener('mousedown', linkToItem);
+            menuEntry.addEventListener('mouseup', linkToItem);
+            menuEntry.addEventListener('click', linkToItem);
+            menuEntry.addEventListener('touchstart', linkToMobileItem);
+            menuEntry.addEventListener('touchmove', linkToMobileItem);
+            menuEntry.addEventListener('touchend', linkToMobileItem);
+        });
+    });
+
+    function hideIfNonMenuBounds(e) {
+        if (isEventOutsideMenu(e)) {
+            hideMenus();
+        }
+    }
+
+    addEventListener('mousemove', hideIfNonMenuBounds);
+    addEventListener('touchend', hideIfNonMenuBounds);
+    addEventListener('mouseup', hideIfNonMenuBounds);
+    addEventListener('mousedown', hideIfNonMenuBounds);
+    addEventListener('click', hideIfNonMenuBounds);
+}
+
+function handleSearch() {
+    const userBlock = document.querySelector('#ftl-header .header-top .user-block');
+    const loginBlock = document.querySelector('#ftl-header .header-top .user-login');
+    const searchBtn = document.querySelector('#header-search-button');
+    const searchInput = document.querySelector('#header-search-input');
+
+    function showSearch() {
+        userBlock.style.opacity = 0;
+        loginBlock.style.opacity = 0;
+        setTimeout(function() {
+            userBlock.classList.add('hidden');
+            loginBlock.classList.add('hidden');
+            searchInput.value = '';
+            searchInput.style.display = 'unset';
+            setTimeout(function () {
+                searchInput.style.width = '300px';
+                searchInput.focus();
+            });
+        }, 300);
+    }
+
+    function hideSearch() {
+        searchInput.value = '';
+        searchInput.style.width = '0';
+        setTimeout(function() {
+            searchInput.style.display = 'none';
+            userBlock.classList.remove('hidden');
+            loginBlock.classList.remove('hidden');
+            setTimeout(function() {
+                userBlock.style.opacity = 1;
+                loginBlock.style.opacity = 1;
+            }, 100);
+        }, 250);
+    }
+
+    function doSearch() {
+        if (!searchInput || !searchInput.value.length) { // hide search if no content
+            hideSearch();
